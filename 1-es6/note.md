@@ -890,17 +890,5 @@ runFor1Sec();
 console.log('hello');
 ```
 
-```js
-function foo() {
-  console.log('foo');
-}
-function runFor1Sec() {
-  // a for loop or while loop or a heavy computing logic which requires 1 sec to finish
-}
-setTimeout(foo, 1000);
-runFor1Sec();
-console.log('hello');
-```
-
 Quiz questions references
 [1](https://dmitripavlutin.com/javascript-this-interview-questions/#question-1-variable-vs-property)
