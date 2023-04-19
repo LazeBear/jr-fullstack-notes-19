@@ -231,3 +231,88 @@ const calendar = {
 calendar.nextDay();
 
 // callback function is executed by window
+
+// function cb() {
+//   console.log(`Hello, ${this.who}!`);
+// }
+
+// const object = {
+//   who: 'mason',
+//   cb,
+// };
+
+// function foo(cb) {
+//   cb();
+// }
+
+// foo(object.cb); // ??
+
+// Object.keys()
+// Object.values()
+
+// template function
+// instance -> object
+
+// prototype, prototype chain
+
+// function foo(...args) {
+//   if (args)
+// }
+
+// class Pet {
+//   constructor(name) {
+//     this.name = name;
+//   }
+//   getName() {
+//     return this.name;
+//   }
+// }
+
+// const cat = new Pet('Fluffy');
+
+// console.log(cat.getName()); // Fluffy
+
+// const { getName } = cat;
+// console.log(getName()); // Fluffy
+
+// Asynchronous 异步
+// Syncronous 同步
+
+// blocking, non-blocking
+// 阻塞，非阻塞
+
+// event driven 事件驱动
+
+// js is single threaded
+// 单线程
+// process -> 进程
+
+// event loop
+
+// function foo() {
+//   console.log('foo'); [1004ms]
+// }
+// function runFor1Sec() {
+//   // a for loop or while loop or a heavy computing logic which requires 1 sec to finish
+// }
+// [1ms]
+// setTimeout(foo, 1000); ([1001ms] exectute foo)
+// [2ms]
+// runFor1Sec();
+// foo is ready at 1001ms
+// [1002ms]
+// console.log('hello');
+// [1003ms]
+
+// Browser -> Web APIs
+//
+
+// callback queue -> macrotask queue
+// promise queue -> microtask queue
+// []
+
+// call stack
+//
+
+// stateless
+// stateful
