@@ -1,0 +1,53 @@
+application
+/v1/users GET, POST, PUT, DELETE, :id, nested id /users/:userId/posts/:postId
+/v1/tasks
+大路径（资源路径）
+
+router
+userRouter GET, POST, PUT, DELETE, :id, nested id /users/:userId/posts/:postId
+taskRouter
+
+GET /v1/users/:id
+
+
+// root level
+
+-- package.json
+-- package-lock.json
+-- node_modules
+-- src
+  |-- index.js 入口文件 （app.js, server.js）
+  |-- routes （资源路径）
+     |-- user(s).js (users.router.js)
+     |-- task(s).js
+     |-- index.js (注册所有路径) v1Router
+  |-- controllers (负责逻辑处理，做关联) （data validation）
+    |-- task(s).js (task.controller.js)
+    |-- ...
+  |-- models (数据模型) （db interactions）crud， ORM （object relational mapping）
+    |-- Task.js (Capital case) (Task.model.js)
+    |-- ...
+  |-- middleware
+    |-- cors.js
+    |-- errorMiddleware
+  |-- utils (utilities)
+    |-- helper function
+    |-- db connection
+
+
+小：routes 和 controllers合并
+大：services （从controllers拆出来）
+
+
+resource/domain
+-- src
+  |-- user
+    |-- user.model.js
+    |-- user.controller.js
+    |-- user.route.js
+  |-- task
+    |-- ...
+
+
+require('/routes');
+require('/routes/index.js');
