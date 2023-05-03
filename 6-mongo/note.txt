@@ -1,0 +1,30 @@
+mongodb
+
+no-SQL
+
+SQL (structured query language)
+relational database
+关系型数据库
+mySQL
+postgresQL
+SQLite
+
+no-SQL
+document-oriented -> mongodb
+key-value -> redis
+graph-oriented -> neo4j
+column-family -> cassandra
+
+
+BSON - binary json
+
+mongo shell
+
+CRUD
+create
+read
+update
+delete
+
+
+operator

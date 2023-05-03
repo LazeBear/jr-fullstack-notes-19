@@ -1,3 +1,5 @@
+const createLogger = require('../utils/logger');
+const logger = createLogger('tasks.js');
 const tasks = [
   {
     id: 1,
@@ -8,6 +10,48 @@ const tasks = [
 
 let id = 1; //self increase
 
+/**
+ * @swagger
+ * components:
+ *  schemas:
+ *    Task:
+ *      type: object
+ *      properties:
+ *        id:
+ *          type: integer
+ *          description: The unique identifier of the task
+ *          example: 1
+ *        description:
+ *          type: string
+ *          description: The description of the task
+ *        done:
+ *          type: boolean
+ *          description: The complete state of the task
+ *
+ *
+ */
+
+/**
+ * @swagger
+ * /tasks:
+ *  get:
+ *    summary: Retrive all tasks or filter by description
+ *    parameters:
+ *      - in: query
+ *        name: description
+ *        schema:
+ *          type: string
+ *        description: use this field to filter task by description
+ *    responses:
+ *      200:
+ *        description: a list of tasks
+ *        content:
+ *          application/json:
+ *            schema:
+ *              type: array
+ *              items:
+ *                $ref: '#/components/schemas/Task'
+ */
 const getAllTasks = (req, res) => {
   // //
   // try {
@@ -40,7 +84,8 @@ const getAllTasks = (req, res) => {
   // else {
   //   res.status(404).json('unknown search query');
   // }
-
+  // logger.info('user cannot request all tasks');
+  // res.status(400).json('error');
   res.json(tasks);
   return;
 };
@@ -156,3 +201,6 @@ module.exports = {
   deleteTaskById,
   createTask,
 };
+
+// yaml
+// yml
