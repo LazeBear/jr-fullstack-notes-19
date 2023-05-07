@@ -28,3 +28,140 @@ delete
 
 
 operator
+
+
+student: address -> 1 : 1
+address: student -> 1 : 1
+
+student: address -> 1 : M
+address: student -> 1 : 1
+
+student: address -> 1 : M
+address: student -> 1 : N
+M:N
+
+[
+  {
+    _id: 1,
+    name: "xxx",
+    addresses: [
+      {
+        _id: "A1",
+        city: "sydney",
+        postcode: 2000,
+      },
+      {
+        _id: "A2",
+        city: "brisbane",
+        postcode: 4000
+      }
+    ]
+  },
+  {
+    _id: 2,
+    name: "yyy",
+    addresses: [
+      {
+        _id: "A1",
+        city: "sydney",
+        postcode: 2000,
+      },
+      {
+        _id: "A2",
+        city: "brisbane",
+        postcode: 4000
+      }
+    ]
+  }
+]
+
+students
+[
+  {
+    _id: 2,
+    name: "yyy",
+    addresses: [
+      ObjectId("A1“)，
+      ObjectId("A2"),
+    ]
+  }
+]
+
+addresses
+[
+  {
+    _id: "A1",
+    city: "sydney",
+    postcode: 2000,
+  },
+  {
+    _id: "A2",
+    city: "brisbane",
+    postcode: 4000
+  }
+]
+
+
+students
+[
+  {
+    _id: 1,
+    name: "xxx",
+    addresses: [
+      {id: ObjectId("A1“)，city: "sydney"}
+      ObjectId("A2"),
+    ]
+  },
+  {
+    _id: 2,
+    name: "yyy",
+    addresses: [
+      ObjectId("A1“)，
+      ObjectId("A2"),
+    ]
+  }
+]
+
+addresses
+[
+  {
+    _id: "A1",
+    city: "sydney",
+    postcode: 2000,
+    students: [
+      ObjectId("1"),
+      ObjectId("2"),
+    ]
+  },
+  {
+    _id: "A2",
+    city: "brisbane",
+    postcode: 4000,
+    students: [
+      ObjectId("1"),
+      ObjectId("2"),
+    ]
+  }
+]
+
+sensor
+> 16mb
+> 16kb
+{
+
+}
+log
+{
+  sensorId: xxxx
+}
+
+replica set
+sharding
+
+
+sequelize
+prisma
+
+
+ERD
+Entity relational diagram

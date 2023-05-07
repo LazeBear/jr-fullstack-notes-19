@@ -16,3 +16,6 @@
 6. Delete students who has a gpa less than 5 or one of the assignment result is less than 20 ($or)
 
 7. Find how many students left
+
+ssh
+ORM
