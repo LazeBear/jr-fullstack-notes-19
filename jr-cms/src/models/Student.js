@@ -7,7 +7,7 @@ const studentSchema = new Schema({
     required: true,
     // simple validation
     minLength: 2,
-    unique: true,
+    // unique: true,
   },
   lastName: {
     type: String,
