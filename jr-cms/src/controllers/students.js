@@ -47,6 +47,16 @@ const deleteStudentById = async (req, res) => {
     res.status(404).json({ error: 'Student not found' });
     return;
   }
+  await CourseModel.updateMany(
+    {
+      students: student._id,
+    },
+    {
+      $pull: {
+        students: student._id,
+      },
+    }
+  ).exec();
   res.sendStatus(204);
 };
 

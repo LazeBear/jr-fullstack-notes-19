@@ -1,0 +1,44 @@
+加密     -> 解密
+encrypt -> decrpyt
+
+x -> X   X -> x
+encode -> decode
+Base64
+
+哈希 -> hash
+x -> Y    Y != x
+
+1
+11
+111
+112
+x = 123456
+userA
+register
+x -> Y
+login
+x' ->? Y
+
+userB
+register
+x -> Y
+
+
+salt
+
+register
+x + randomSalt1 ->hash -> Y1 (randomSalt1)
+x + randomSalt2 ->hash -> Y2 (randomSalt2)
+
+login
+x' + randomSalt1 -> hash -> Y' ==? Y1
+
+
+bcrypt
+
+
+AWS elasticbeanstalk
+Amazon web service
+
+Mongodb atlas
+Mongodb compass
