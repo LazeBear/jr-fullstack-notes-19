@@ -16,6 +16,7 @@ const register = async (req, res, next) => {
   // check if username is taken
 
   const user = new UserModel({ username, password });
+  await user.hashPassword();
   await user.save();
 
   // generate token
@@ -33,7 +34,9 @@ const login = async (req, res, next) => {
     res.status(401).json({ error: 'Invalid credentials' });
     return;
   }
-  if (password !== user.password) {
+  const isValidPassword = await user.validatePassword(password);
+  // Promise
+  if (!isValidPassword) {
     res.status(401).json({ error: 'Invalid credentials' });
     return;
   }
