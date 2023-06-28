@@ -1,0 +1,43 @@
+
+local codebase -> github -> aws codepipeline -> aws elb (elasticbeanstalk)
+
+local codebase change -> run local testing -> push code to remote branch (feature branch) ->
+create Pull Request (PR) -> request review and run CI testing -> merge feature branch to master ->
+github master branch change ->
+ci testing (pipeline)
+(deploy ->)
+                        https://aws.codechange.com
+ -> webhook call -> codepipeline get request -> fetch latest master branch ->
+push latest code to elb -> elb deploy the latest change
+
+Continous integration (CI) -> test (eslint)
+Continous deploy (CD)
+
+
+ci pipeline (cloud)
+
+
+feature branch
+-> development branch
+CI/CD -> development environment (real time)
+1 day, 1 week later
+development branch -> staging branch -> CI/CD -> staging environment
+..... -> production
+
+
+test party
+
+
+
+local
+development
+staging
+production
+
+worker thread
+
+1mb
+1mb
+
+10mb
+1mb

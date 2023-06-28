@@ -1,0 +1,39 @@
+TDD test driven development
+
+regression test
+
+unit test （单元测试）- jest, mocha, jasmine
+integration test (集成测试) - jest, selenium
+end to end test (e2e) - selenium, cypress
+
+
+test coverage
+
+const fn2 = require('xxx');
+
+function foo(x,y,fn){
+  fn();
+  fn2();
+}
+
+mock
+
+black box testing - white box testing
+
+
+/courses/course.controller.js
+/courses/course.model.js
+...
+/courses/__tests__/xxxx.test.js
+
+
+src/__tests__/xxx.test.js
+src/__tests__/unit/xxx.test.js
+src/__tests__/integration/xxx.test.js
+
+
+
+x.test.js
+x.spec.js
+
+jest

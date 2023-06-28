@@ -6,7 +6,7 @@ const authGuard = require('../middleware/authGuard');
 
 const router = Router();
 
-router.use('/students', studentRouter);
+router.use('/students', authGuard, studentRouter);
 router.use('/courses', authGuard, courseRouter);
 router.use('/auth', authRouter);
 
