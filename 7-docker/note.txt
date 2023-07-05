@@ -1,0 +1,58 @@
+container 容器化
+docker
+
+vagrant
+
+virtual machine
+
+linux
+
+
+
+docker image 镜像
+
+dockerfile 打包文件
+
+docker hub
+
+container
+
+host 宿主机
+
+network
+
+port forwarding
+
+volume mount 磁盘挂载
+
+
+
+- -> flag, configuration
+
+-p host port: container port
+
+
+https://repo.my.com/xxxxx
+
+myimage:0.0.1
+myimage:0.1.0
+
+
+
+layer
+linux
+node-16
+node-18
+
+
+linux + some code -> node:16
+linux + some other code -> node:18
+cache
+
+
+alpine
+slim
+
+
+slug
+
